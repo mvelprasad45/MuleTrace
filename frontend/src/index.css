@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #020909;
+  --color-cyber-card: rgba(5, 23, 24, 0.75);
+  --color-cyber-border: rgba(0, 245, 212, 0.22);
+  --color-cyber-primary: #00F5D4;
+  --color-cyber-teal: #0A3A40;
+  --color-cyber-red: #EF4444;
+  --color-cyber-orange: #F97316;
+  --color-cyber-text-muted: #94A3B8;
+  --color-cyber-text-light: #E2E8F0;
+}
+
+@layer base {
+  body {
+    background-color: #020909;
+    color: #E2E8F0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Cyber Matrix Grid Pattern */
+.bg-grid-cyber {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 245, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 245, 212, 0.04) 1px, transparent 1px);
+}
+
+/* Glassmorphism Cyber Card */
+.cyber-card {
+  background: rgba(4, 20, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 245, 212, 0.38);
+}
+
+.cyber-card-glow {
+  background: rgba(4, 24, 26, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 245, 212, 0.35);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.18);
+}
+
+/* Primary Command Centre Neon Action Button */
+.btn-cyber-primary {
+  background-color: #00F5D4 !important;
+  color: #020909 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.45);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cyber-primary:hover {
+  background-color: #1affdf !important;
+  box-shadow: 0 0 32px rgba(0, 245, 212, 0.8);
+  transform: translateY(-1px) scale(1.01);
+}
+
+.btn-cyber-primary:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Custom Neon Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020909;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 245, 212, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 212, 0.55);
+}
